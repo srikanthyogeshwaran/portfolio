@@ -1,0 +1,226 @@
+/* General Page Styles */
+.contact-page {
+  min-height: 100vh;
+  color: #fff;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.contact-page.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-content {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.contact-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  animation: title-fade-in 1.2s ease-in-out;
+}
+.main-title {
+  font-weight: bold;
+}
+.contact-description {
+  margin-bottom: 1.5rem;
+  animation: fade-in 1.6s ease-in-out;
+}
+
+/* Keyframes */
+@keyframes title-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  animation: fade-in 1.4s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.contact-item {
+  animation: contact-fade-in 1.2s ease-in-out;
+  background-color: #222;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.contact-item:hover {
+  background-color: #333;
+  transform: translateY(-5px);
+}
+
+@keyframes contact-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.icon-container {
+  width: 3rem;
+  height: 3rem;
+  background-color: #ffc107;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.icon {
+  color: #111;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-title {
+  font-weight: bold;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.contact-item:hover .contact-title {
+  color: #ffc107; 
+}
+
+.contact-content {
+  color: #9ca3af;
+  margin-top: 0.2rem;
+  transition: color 0.3s ease;
+}
+
+.contact-item:hover .contact-content {
+  color: #fff;
+}
+
+
+.contact-form-wrapper {
+  background-color: #222;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  animation: fade-in 1.6s ease-in-out;
+}
+
+.contact-form-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  animation: fade-in 1.4s ease-in-out;
+  transition: color 0.3s ease;
+}
+
+.contact-form-title:hover {
+  color: #ffc107; 
+}
+
+.form-inputs {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #333;
+  border: 1px solid #444;
+  border-radius: 0.5rem;
+  color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #ffc107;
+  outline: none;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: #ffc107;
+  color: #111;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #e0a800;
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr; 
+  }
+  
+  .contact-form-wrapper {
+    padding: 1.5rem; 
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 0.5rem;
+  }
+
+  .submit-button {
+    padding: 0.8rem;
+  }
+}

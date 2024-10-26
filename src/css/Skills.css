@@ -1,0 +1,140 @@
+/* Skills.css */
+
+/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #1c1c1c;
+  color: #fff;
+}
+
+/* Skill dashboard container */
+.min-h-screen {
+  min-height: 100vh;
+  padding-left: 4rem; /* Adds consistent left padding to bring content left */
+}
+
+.padding-lg {
+  padding: 2rem;
+}
+
+.max-width-lg {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Vertical spacing */
+.space-y-lg > * + * {
+  margin-top: 4rem;
+}
+
+/* Grid layout adjustments */
+.grid-4-cols {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr); /* Fixed 4 columns */
+}
+
+.mt-lg {
+  margin-top: 2rem;
+}
+
+/* Headings and text */
+.text-accent {
+  color: #ffffff;
+}
+
+.heading-xl {
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center; /* Center-aligns titles */
+  margin-bottom: 3rem;
+}
+
+.heading-lg {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Circular progress styles */
+.circular-progress {
+  position: relative;
+  display: inline-block;
+}
+
+.circular-progress svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFB100;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Skill card styles */
+.skill-card {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  min-width: 250px;
+  max-width: 300px;
+  min-height: 300px;
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(254, 212, 0, 0.4);
+}
+
+.skill-logo {
+  margin-bottom: 10px;
+}
+
+/* Adjusting second row of programming skills to align better */
+.second-row {
+  min-width: 250px;
+  margin-left: 11.5rem; /* Aligns second row for wider screens */
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .grid-4-cols {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  }
+
+  .second-row {
+    margin-left: 0; /* Remove left margin on smaller screens */
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-4-cols {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-4-cols {
+    grid-template-columns: 1fr; /* 1 column */
+  }
+
+  .min-h-screen {
+    padding-left: 1rem; /* Reduce left padding */
+  }
+}

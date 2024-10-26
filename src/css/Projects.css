@@ -1,0 +1,151 @@
+/* General background and color scheme */
+:root {
+  --background-color: #1a1a1a;
+  --primary-color: #ffb100;
+  --hover-color: #e6a000;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: Arial, sans-serif;
+}
+
+/* Project card styling */
+.project-card {
+  width: 360px;
+  /* Increased width */
+  height: 450px;
+  /* Increased height */
+  border: 2px solid #333;
+  /* Added border */
+  border-radius: 12px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  /* Added padding for internal spacing */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Center-align title in project card */
+.project-card h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  /* Increased font size for title */
+  margin-bottom: 0.5rem;
+  /* Space below title */
+}
+
+/* Justify and add spacing around text */
+.project-card p {
+  text-align: justify;
+  margin-bottom: 1rem;
+  /* Added margin below description text */
+}
+
+.container1 {
+  display: flex;
+  font-size: 3rem;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Grid layout for project cards */
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  /* Responsive columns */
+  justify-items: center;
+  /* Center items in grid */
+}
+
+/* Center button at the bottom of the card with bottom spacing */
+.project-card .p-4 {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+  /* Added padding for spacing at the bottom */
+}
+
+/* Color classes */
+.bg-zinc-900 {
+  background-color: #1e1e1e;
+}
+
+.bg-zinc-800 {
+  background-color: #333;
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.text-white {
+  color: rgb(248, 248, 248);
+}
+
+/* Button styling */
+button {
+  background-color: var(--primary-color);
+  color: black;
+  padding: 0.7rem 1.2rem;
+  /* Increased padding for button */
+  border-radius: 6px;
+  font-size: 1rem;
+  /* Increased button font size */
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+/* Project image settings */
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.object-center {
+  object-position: center;
+}
+
+/* Technology tag styling */
+.technologies-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* Increased gap for spacing */
+  justify-content: center;
+}
+
+.technology-item {
+  padding: 0.4rem 1rem;
+  /* Increased padding */
+  background-color: #333;
+  color: #d1d1d1;
+  border-radius: 8px;
+  font-size: 1rem;
+  /* Increased font size for tags */
+}

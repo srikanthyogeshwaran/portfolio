@@ -1,0 +1,74 @@
+/* Fullscreen container */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #1a1a1a; /* Background color */
+  color: white;
+  padding: 2rem;
+}
+
+/* Home content styling */
+.home-content {
+  text-align: center;
+  max-width: 800px; /* Limit width on large screens */
+  width: 100%;
+}
+
+/* Typing effect name styling */
+.name-animation {
+  font-size: 3rem; /* Default size */
+  color: #ffb100; /* Name color */
+  line-height: 1.2;
+}
+
+/* Role text styling */
+h2 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #ff9900;
+}
+
+/* Stop caret blinking after typing finishes */
+.stop-caret::after {
+  content: '';
+}
+
+/* Fade-up animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Visible state for fade-up effect */
+.fade-up-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1rem;
+  }
+
+  .name-animation {
+    font-size: 2.5rem; /* Smaller font for mobile */
+  }
+
+  h2 {
+    font-size: 1.2rem; /* Adjust role text size */
+  }
+}
+
+@media (max-width: 480px) {
+  .name-animation {
+    font-size: 2rem; /* Even smaller font for very small screens */
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,192 @@
+/* Container */
+.education-container {
+  min-height: 100vh;
+  color: white;
+  padding: 2rem;
+}
+
+#header {
+  text-align: center;
+  color: white;
+}
+
+.resume-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .resume-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-title {
+    font-size: 1.75rem;
+  }
+}
+
+/* Timeline (Education) */
+.timeline-item {
+  position: relative;
+  padding-left: 5rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    padding-left: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-item {
+    padding-left: 1rem;
+  }
+}
+
+/* Hover Effect */
+.timeline-item:hover {
+  transform: translateX(10px);
+  border-color: #ffd700;
+}
+
+.timeline-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 480px) {
+  .timeline-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+.education-info {
+  margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  .education-info {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-info {
+    margin-left: 0;
+    text-align: left;
+  }
+}
+
+/* The yellow line, moved towards the right */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 3.5rem;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: #ffb100;
+}
+
+@media (max-width: 768px) {
+  .timeline-item::before {
+    left: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-item::before {
+    left: 1rem;
+  }
+}
+
+.timeline-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .timeline-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-title {
+    font-size: 1.3rem;
+  }
+}
+
+.timeline-institution {
+  font-size: 1.2rem;
+  color: #ffd700;
+}
+
+@media (max-width: 768px) {
+  .timeline-institution {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-institution {
+    font-size: 0.9rem;
+  }
+}
+
+.timeline-score {
+  font-size: 1.1rem;
+  color: #aaa;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .timeline-score {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-score {
+    font-size: 0.9rem;
+  }
+}
+
+.timeline-date {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .timeline-date {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-date {
+    font-size: 0.8rem;
+  }
+}
+
+.calendar-icon {
+  margin-right: 0.5rem;
+}
+
+/* GraduationCap Icon */
+.graduation-icon {
+  flex-shrink: 0;
+}
